@@ -159,7 +159,7 @@ footer {
 main {
     max-width: 800px;
     width: 100%;
-    height: calc(100vh - 60px);
+    height:  calc(var(--vh, 1vh) * 100 - 60px);
     position: relative;
     margin: 0 auto;
     padding-top: 60px;
@@ -174,7 +174,7 @@ main {
 
 #Check-list {
     width: 100%;
-    height:calc(100% - 60px);
+    height:calc(var(--vh, 1vh) * 100 - 60px);
     position: absolute;
 }
 
