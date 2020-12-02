@@ -1,6 +1,11 @@
 ﻿* {
     transition: .3s;
 }
+.container{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
 
 main::-webkit-scrollbar-track, .alert-secondary::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
