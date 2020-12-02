@@ -6,7 +6,7 @@
     <title>Document</title>
     <link href="CSS/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.css" rel="stylesheet" />
-    <link href="CSS/main.css?2024" rel="stylesheet" />
+    <link href="CSS/main.css?20245" rel="stylesheet" />
 </head>
 <body>
     <div id="container">
@@ -468,7 +468,15 @@
 <script src="JS/bootstrap.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.js"></script>
 <script>
+    function safariHacks() {
+        let windowsVH = window.innerHeight / 100;
+        document.getElementById('container').style.setProperty('--vh', windowsVH + 'px');
+        window.addEventListener('resize', function() {
+        document.getElementById('container').style.setProperty('--vh', windowsVH + 'px');
+        });
+    }
 
+safariHacks(    );
         
     //視力自檢變數
     let goodCount = 0; let badCount = 0; let nextid = 0; let Result = 0

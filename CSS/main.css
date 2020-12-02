@@ -3,7 +3,8 @@
 }
 #container{
     width: 100%;
-    height: fill-available;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     overflow: hidden;
 }
 
