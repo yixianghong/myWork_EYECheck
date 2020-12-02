@@ -579,7 +579,7 @@ main {
     }
 
     #item-EyeCheck-step5 .AnalysisArea, #item-ColorCheck-step4 .AnalysisArea {
-        height: 165px;
+        height: auto;
     }
 
         #item-EyeCheck-step5 .AnalysisArea .AnalysisHeader h4, #item-ColorCheck-step4 .AnalysisArea .AnalysisHeader h4 {
