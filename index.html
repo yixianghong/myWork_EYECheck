@@ -471,8 +471,9 @@
     function safariHacks() {
         let windowsVH = window.innerHeight / 100;
         document.getElementById('container').style.setProperty('--vh', windowsVH + 'px');
+        document.getElementById('Check-list').style.setProperty('--vh', windowsVH + 'px');
         window.addEventListener('resize', function() {
-        document.getElementById('container').style.setProperty('--vh', windowsVH + 'px');
+            document.getElementById('container').style.setProperty('--vh', windowsVH + 'px');
         });
     }
 
