@@ -6,7 +6,7 @@
     <title>Document</title>
     <link href="CSS/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.css" rel="stylesheet" />
-    <link href="CSS/main.css?202" rel="stylesheet" />
+    <link href="CSS/main.css?2020" rel="stylesheet" />
 </head>
 <body>
     <div id="container">
@@ -24,7 +24,7 @@
             </div>
         </header>
         
-        <footer>
+        <!-- <footer>
             <a href="/VisionScreenCheck/index">
                 <img class="IconLink" src="Images/IconPic03_active.png" /><br>
                 <span  class="color-blue">線上檢測</span>
@@ -37,7 +37,7 @@
                 <img class="IconLink" src="Images/IconPic05.png" /><br>
                 <span>近視控制</span>
             </a>
-        </footer>
+        </footer> -->
         <main>
             <div id="Check-list">
                 <div class="text-center">
@@ -65,18 +65,20 @@
                          <div>
                             <img src="Images/BNPic02.svg" />
                          </div>
-                         <div class="text-center color-blue" style="margin: 1rem 0;">為保障您的權益，請確認以下條款內容</div>
-                         <div class="p-3 attentionBox">
-                             <p>免責聲明：</p>
-                             <p>本網頁之視力檢查僅為輔助參考，並非醫學檢驗，不可取代專業眼科醫師及驗光師(生)之診斷與處方 。</p>
-                             <p class="mb-0">本檢測僅提供一般視力參考，不適用於診斷疾病、治療、舒緩、預防疾病或其他情況。如有問題，應尋求專業眼科醫師診療。</p>
-                         </div>
-                          <div class="form-check text-center mt-1 mb-2">
-                            <input class="form-check-input invalidCheck" type="checkbox" id="invalidEyeCheck" required="">
-                            <label class="form-check-label" for="invalidEyeCheck">
-                                已閱讀，並同意以上條文
-                            </label>
-                          </div>
+                         <div class="content">
+                            <div class="text-center color-blue" style="padding: 15px;">為保障您的權益，請確認以下條款內容</div>
+                            <div class="p-3 attentionBox">
+                                <p>免責聲明：</p>
+                                <p>本網頁之視力檢查僅為輔助參考，並非醫學檢驗，不可取代專業眼科醫師及驗光師(生)之診斷與處方 。</p>
+                                <p class="mb-0">本檢測僅提供一般視力參考，不適用於診斷疾病、治療、舒緩、預防疾病或其他情況。如有問題，應尋求專業眼科醫師診療。</p>
+                            </div>
+                            <div class="form-check text-center mt-1 mb-2">
+                                <input class="form-check-input invalidCheck" type="checkbox" id="invalidEyeCheck" required="">
+                                <label class="form-check-label" for="invalidEyeCheck">
+                                    已閱讀，並同意以上條文
+                                </label>
+                            </div>
+                        </div>
                          <div class="btnBox">
                             <button class="w-80 btn pageBtn btn-block btn-primary screen-reset" data-nextpage="item-EyeCheck-step2" data-backpage="item-EyeCheck-step1" disabled>下一步</button>
                             <div class="w-80 pageBtn text-center btn-block color-blue" data-nextpage="Check-list" data-backpage="item-EyeCheck-step1">回上一步</div>
@@ -86,31 +88,33 @@
                          <div>
                             <img src="Images/BNPic03.svg" />  
                          </div>
-                         <div class="pt-3 resetBox">
-                             <div class="text-center standContainer">
-                                 <img class="screenReset"src="Images/screenReset.svg" />
-                                 <div class="d-flex justify-content-around w-80">
-                                     <div class="changeSmall changeBtn">
-                                         <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-dash" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color:#26B5E9">
-                                             <path fill-rule="evenodd" d="M3.5 8a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.5-.5z" />
-                                         </svg>
-                                     </div>
-                                     <div class="d-flex align-items-center">
-                                         <input type="range" class="form-control-range" id="formControlRange" value="100" oninput="showVal(this.value)" min="0" max="200">
-                                     </div>
+                         <div class="content">
+                            <div class="pt-3">
+                                <div class="text-center standContainer">
+                                    <img class="screenReset"src="Images/screenReset.svg" />
+                                    <div class="d-flex justify-content-around w-80">
+                                        <div class="changeSmall changeBtn">
+                                            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-dash" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color:#26B5E9">
+                                                <path fill-rule="evenodd" d="M3.5 8a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.5-.5z" />
+                                            </svg>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <input type="range" class="form-control-range" id="formControlRange" value="100" oninput="showVal(this.value)" min="0" max="200">
+                                        </div>
 
-                                     <div class="changeBig changeBtn">
-                                         <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color:#26B5E9">
-                                             <path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z"></path>
-                                             <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z"></path>
-                                         </svg>
-                                     </div>
-                                 </div>
-                             </div>
-                             <div class="w-80 p-2">
-                                  <p class="color-blue mb-0" style="font-size:14px;">*將10元硬幣或尺置於螢幕圖案上，點擊“放大”或“縮小”按鈕，調整螢幕上圖案到真實大小(10元硬幣的直徑為2.6cm)</p>
-                             </div>
-                         </div>
+                                        <div class="changeBig changeBtn">
+                                            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color:#26B5E9">
+                                                <path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z"></path>
+                                                <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-80 p-2">
+                                    <p class="color-blue mb-0" style="font-size:14px;">*將10元硬幣或尺置於螢幕圖案上，點擊“放大”或“縮小”按鈕，調整螢幕上圖案到真實大小(10元硬幣的直徑為2.6cm)</p>
+                                </div>
+                            </div>
+                        </div>
                          <div class="btnBox">
                               <div class="w-80 btn pageBtn btn-primary btn-block" data-nextpage="item-EyeCheck-step3" data-backpage="item-EyeCheck-step2">校準完成</div>
                               <div class="w-80 pageBtn text-center btn-block color-blue" data-nextpage="item-EyeCheck-step1" data-backpage="item-EyeCheck-step2">回上一步</div>
@@ -120,29 +124,31 @@
                          <div>
                             <img src="Images/BNPic04.svg" />  
                          </div>
-                         <div class="w-80 HowToUse">
-                             <div class="color-blue HowToUseTitle" style="background: #CFEAF5;padding:0.5rem">步驟一</div>
-                             <div class="HowToUseSlide">
-                                 <div class="absolute nextBtn" style="top: 50%;left: 2px;color: #2C8CC7;" data-id="-1">
-                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                         <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
-                                     </svg>
-                                 </div>
-                                 <img data-slide="1" data-text="步驟一" class="slide active" src="Images/Demo01.svg?2020" />
-                                 <img data-slide="2" data-text="步驟二" class="slide" src="Images/Demo02.svg?2021" />
-                                 <img data-slide="3" data-text="步驟三" class="slide" src="Images/Demo03.svg?2020" />
-                                 <div class="absolute d-flex selectSlideBox">
-                                     <div data-slide="1" data-text="步驟一" class="selectSlide active" data-id="1"></div>
-                                     <div data-slide="2" data-text="步驟二" class="selectSlide" data-id="2"></div>
-                                     <div data-slide="3" data-text="步驟三" class="selectSlide" data-id="3"></div>
-                                 </div>
-                                 <div class="absolute nextBtn" style="top: 50%;right: 2px;color: #2C8CC7;" data-id="1"> 
-                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                         <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                                     </svg>
-                                 </div>
-                             </div>
-                         </div>
+                         <div class="content">
+                            <div class="w-80 HowToUse">
+                                <div class="color-blue HowToUseTitle" style="background: #CFEAF5;padding:0.5rem">步驟一</div>
+                                <div class="HowToUseSlide">
+                                    <div class="absolute nextBtn" style="top: 50%;left: 2px;color: #2C8CC7;" data-id="-1">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                                        </svg>
+                                    </div>
+                                    <img data-slide="1" data-text="步驟一" class="slide active" src="Images/Demo01.svg?2020" />
+                                    <img data-slide="2" data-text="步驟二" class="slide" src="Images/Demo02.svg?2021" />
+                                    <img data-slide="3" data-text="步驟三" class="slide" src="Images/Demo03.svg?2020" />
+                                    <div class="absolute d-flex selectSlideBox">
+                                        <div data-slide="1" data-text="步驟一" class="selectSlide active" data-id="1"></div>
+                                        <div data-slide="2" data-text="步驟二" class="selectSlide" data-id="2"></div>
+                                        <div data-slide="3" data-text="步驟三" class="selectSlide" data-id="3"></div>
+                                    </div>
+                                    <div class="absolute nextBtn" style="top: 50%;right: 2px;color: #2C8CC7;" data-id="1"> 
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                          <div class="btnBox">
                               <div class="w-80 btn pageBtn btn-primary btn-block startREYEBtn" data-nextpage="item-EyeCheck-step4" data-backpage="item-EyeCheck-step3">開始測驗</div>
                               <div class="w-80 pageBtn text-center btn-block color-blue" data-nextpage="item-EyeCheck-step2" data-backpage="item-EyeCheck-step3">回上一步</div>
@@ -234,7 +240,7 @@
                                       <h4 class="mb-0 color-blue">視力自檢結果</h4>
                                       <div class="text-gray" style="font-size:14px;">檢測時間：<span class="Today"></span></div>
                                   </div>
-                                  <div class="d-flex justify-content-around mt-1">
+                                  <div class="d-flex justify-content-around mt-3">
                                       <div class="d-flex flex-column">
                                           <div class="eyeDataTitle">左眼</div>
                                           <div class="eyeDataResult eyeDataResultL"></div>
@@ -246,7 +252,7 @@
                                   </div>
                               </div>
                           </div>
-                          <div class="m-auto" style="width: 75%;padding-top: 35px;">
+                          <div class="m-auto" style="width:80%">
                             <img src="Images/visiontable.svg?2020" />
                           </div>
                            <div class="buttonArea justify-content-around d-flex">
@@ -260,6 +266,7 @@
                          <div>
                             <img src="Images/BNPic05.svg" />
                          </div>
+                         <div class="content">
                          <div class="text-center color-green" style="margin: 1rem 0;">為保障您的權益，請確認以下條款內容</div>
                          <div class="p-3 attentionBox">
                              <p>免責聲明：</p>
@@ -272,6 +279,7 @@
                                 已閱讀，並同意以上條文
                             </label>
                           </div>
+                        </div>
                          <div class="btnBox">
                             <button class="w-80 btn pageBtn btn-block btn-green screen-reset" data-nextpage="item-ColorCheck-step2" data-backpage="item-ColorCheck-step1"  disabled>下一步</button>
                             <div class="w-80 pageBtn text-center btn-block color-green" data-nextpage="Check-list" data-backpage="item-ColorCheck-step1">回上一步</div>
@@ -281,29 +289,31 @@
                         <div>
                             <img src="Images/BNPic06.svg" />  
                          </div>
-                         <div class="w-80 HowToUse">
-                             <div class="color-green HowToUseTitle" style="background: #B8E0E7;padding:0.5rem">步驟一</div>
-                             <div class="HowToUseSlide">
-                                 <div class="absolute nextBtn color-green" style="top: 50%;left: 10px" data-id="-1">
-                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                         <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
-                                     </svg>
-                                 </div>
-                                 <img data-slide="1"  data-text="步驟一" class="slide active" src="Images/Demo04.svg?2020" />
-                                 <img data-slide="2"  data-text="步驟二" class="slide" src="Images/Demo05.svg?2021" />
-                                 <img data-slide="3"  data-text="步驟三" class="slide" src="Images/Demo06.svg?2020" />
-                                 <div class="absolute d-flex selectSlideBox">
-                                     <div data-slide="1" data-text="步驟一" class="selectSlide active" data-id="1"></div>
-                                     <div data-slide="2" data-text="步驟二" class="selectSlide" data-id="2"></div>
-                                     <div data-slide="3" data-text="步驟三" class="selectSlide" data-id="3"></div>
-                                 </div>
-                                 <div class="absolute nextBtn color-green" style="top: 50%;right: 10px" data-id="1"> 
-                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                         <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                                     </svg>
-                                 </div>
-                             </div>
-                         </div>
+                         <div class="content">
+                            <div class="w-80 HowToUse">
+                                <div class="color-green HowToUseTitle" style="background: #B8E0E7;padding:0.5rem">步驟一</div>
+                                <div class="HowToUseSlide">
+                                    <div class="absolute nextBtn color-green" style="top: 50%;left: 10px" data-id="-1">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                                        </svg>
+                                    </div>
+                                    <img data-slide="1"  data-text="步驟一" class="slide active" src="Images/Demo04.svg?2020" />
+                                    <img data-slide="2"  data-text="步驟二" class="slide" src="Images/Demo05.svg?2021" />
+                                    <img data-slide="3"  data-text="步驟三" class="slide" src="Images/Demo06.svg?2020" />
+                                    <div class="absolute d-flex selectSlideBox">
+                                        <div data-slide="1" data-text="步驟一" class="selectSlide active" data-id="1"></div>
+                                        <div data-slide="2" data-text="步驟二" class="selectSlide" data-id="2"></div>
+                                        <div data-slide="3" data-text="步驟三" class="selectSlide" data-id="3"></div>
+                                    </div>
+                                    <div class="absolute nextBtn color-green" style="top: 50%;right: 10px" data-id="1"> 
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="btnBox">
                             <div class="w-80 btn pageBtn btn-block startColorCheckBtn" style="border: 1px solid #31B7C7;color: #0EA099;" data-type="demo" data-nextpage="item-ColorCheck-step3" data-backpage="item-ColorCheck-step2">練習一下</div>
                               <div class="w-80 btn pageBtn btn-green btn-block startColorCheckBtn" data-type="play" data-nextpage="item-ColorCheck-step3" data-backpage="item-ColorCheck-step2">正式測驗</div>
@@ -439,9 +449,9 @@
                               </div>
                           </div>
                           <div class="m-auto text-center colorCheckResult">
-                              <img class="d-none-J w-100 " data-colorResult="1" src="Images/colorResult01.png?2020" />
-                              <img class="d-none-J w-100" data-colorResult="2" src="Images/colorResult02.png?2020" />
-                              <img class="d-none-J w-100" data-colorResult="3" src="Images/colorResult03.png?2020" />
+                              <img class="d-none-J w-100 " data-colorResult="1" src="Images/colorResult01.svg?2020" />
+                              <img class="d-none-J w-100" data-colorResult="2" src="Images/colorResult02.svg?2020" />
+                              <img class="d-none-J w-100" data-colorResult="3" src="Images/colorResult03.svg?2020" />
                           </div>
                          <div class="buttonArea justify-content-around d-flex">
                               <div class="pageBtn startColorCheckBtn mr-3" data-nextpage="item-ColorCheck-step3" data-backpage="item-ColorCheck-step4">重新測驗色覺</div>
@@ -530,15 +540,14 @@
 
     //視力自檢開始
     $(".startREYEBtn").click(function () {
-        window.scroll({
+         window.scroll({
                 top: 0,
-        })
+            })
         let initAnswer = getRandomDirect()
         finalVisionResult = {};
         HideHeader()
         emptyVisionData(initAnswer)
-
-        $('main').css({'height':100 + 'vh'})
+        $('main').css({height:100 + 'vh'})
         $(".RightORLeft").text("右眼")
         $(".RightORLeftInfo").text("請遮住左眼")
         $(".complete").hide()
@@ -626,9 +635,9 @@
             $(".eyeDataResultL").text(finalVisionResult.LEYE)
             $(".eyeDataResultR").text(finalVisionResult.REYE)
             $("#item-EyeCheck-step5 .Today").html(date.toLocaleDateString().slice(0,16))
-            $('main').css({'height':81 + 'vh'})
             $(".complete").fadeIn()
             ShowHeader()
+            $('main').css({height:93 + 'vh'})
             return
         }
 
@@ -647,7 +656,6 @@
         let Shape = getRandomShape()
         HideHeader()
         emptyColorData()
-        $('main').css({'height':100 + 'vh'})
         if (type == 'demo') {
             ChangeShape(Shape, ColorCheckNo, 0)
         } else {
@@ -705,6 +713,7 @@
                     emptyColorData()
                     $("#item-ColorCheck-step3 .pageBtn[data-nextpage='item-ColorCheck-step2']").click()
                     ShowHeader()
+                    $('main').css({height:93 + 'vh'})
                 }
             })
         } else if (ColorCheckNo == 0 && Answer !== MyAnswer) {
@@ -724,6 +733,7 @@
                     emptyColorData()
                     $("#item-ColorCheck-step3 .pageBtn[data-nextpage='item-ColorCheck-step2']").click()
                     ShowHeader()
+                    $('main').css({height:93 + 'vh'})
                 }
             })
 
@@ -809,7 +819,6 @@
     //最終結果
     function FinalColorCheck(ColorTitle,ColorResult,ResultID) {
         ShowHeader()
-        $('main').css({'height':81 + 'vh'})
         $(".colorFinal").click()
         const date = new Date()
 
