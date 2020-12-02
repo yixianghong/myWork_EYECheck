@@ -274,7 +274,7 @@ main {
     }
 
     .resetBox{
-        height: 40vh;
+        height: 280px;
         overflow-y: scroll;
     }
 
