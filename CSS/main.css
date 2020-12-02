@@ -1,0 +1,899 @@
+﻿* {
+    transition: .3s;
+}
+
+main::-webkit-scrollbar-track, .alert-secondary::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #ffffff;
+}
+
+main::-webkit-scrollbar, .alert-secondary::-webkit-scrollbar {
+    width: 0px;
+    background-color: #ffffff;
+}
+
+main::-webkit-scrollbar-thumb, .alert-secondary::-webkit-scrollbar-thumb {
+    background-color: #b7b7b7;
+    border: 1px solid #b7b7b7;
+}
+
+.btn-primary {
+    background-color: #00a2e5;
+    border-color: #00a2e5;
+}
+
+body {
+    max-width: 415px;
+    margin: 0 auto;
+    font-family: 'Avenir', Helvetica, Arial, Microsoft JhengHei;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    touch-action: manipulation;
+}
+
+.d-none-J {
+    display: none;
+}
+
+.noTransition {
+    transition: none !important;
+}
+
+.text-red {
+    color: red;
+}
+
+.text-gray {
+    color: dimgray
+}
+.AnalysisArea .text-gray{
+    font-size: 14px;
+}
+
+
+.arrow-right, .arrow-left, .long-arrow-right, .long-arrow-left {
+    display: block;
+    margin: 30px auto;
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+}
+
+.arrow-right, .long-arrow-right {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.arrow-left {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.arrow-left-white {
+    border-top: 2px solid #FFF;
+    border-left: 2px solid #FFF;
+}
+
+header {
+    height: 7vh;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    background: #FFFFFF;
+    color: white;
+    font-size: large;
+    position: fixed;
+    width: 100%;
+    max-width: 415px;
+    z-index: 100;
+    -webkit-box-shadow: 0px 4px 8px -3px rgba(0,0,0,0.24);
+    box-shadow: 0px 4px 8px -3px rgba(0,0,0,0.24);
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    max-width: 415px;
+    width: 100%;
+    height: 12vh;
+    background: #FFFFFF;
+    bottom: 0;
+    -webkit-box-shadow: 0px 2px 8px -3px rgba(0,0,0,0.24);
+    box-shadow: 0px 2px 8px -3px rgba(0,0,0,0.24);
+    text-align: center;
+}
+
+    footer div {
+        text-align: center;
+    }
+
+    footer .IconLink {
+        width: 32px;
+        height: 32px;
+    }
+
+    footer span {
+        font-size: 12px;
+        color: #B2B1B1;
+    }
+
+.exitLeftWindow {
+    transform: translateX(-100%);
+}
+
+.exitRightWindow {
+    transform: translateX(100%);
+}
+
+.enterWindow {
+    transform: translateX(0%);
+}
+
+.absolute {
+    position: absolute;
+}
+
+.form-check-label {
+    font-size: 14px;
+}
+
+.btnBox {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.btn-block {
+    cursor: pointer;
+}
+
+main {
+    max-width: 800px;
+    width: 100%;
+    height: 81vh;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 7vh;
+    background: #E8F5FB;
+    box-sizing: content-box;
+    overflow-x: hidden;
+}
+
+#Check-list {
+    width: 100%;
+    position: absolute;
+}
+
+.color-green {
+    color: #0EA099;
+}
+
+.color-blue {
+    color: #2E9DCF
+}
+
+.btn-green {
+    background: #00ADB7;
+    color: white;
+}
+
+.BNPic {
+    width: 100%;
+}
+
+.w-80 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.pageBtn{
+    cursor:pointer;
+}
+
+#Check-list .list-item {
+    cursor: pointer;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    -webkit-box-shadow: 0 0px 5px 2px rgba(0,0,0,.04);
+    box-shadow: 0 0px 5px 2px rgba(0,0,0,.04);
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+    #Check-list .list-item[data-item="EyeCheck"] {
+        width: 160px;
+        height: 160px;
+        background-image: url('../Images/btnPic01.png');
+    }
+
+    #Check-list .list-item[data-item="ColorCheck"] {
+        width: 160px;
+        height: 160px;
+        background-image: url('../Images/btnPic02.png');
+    }
+
+#Check-list .item-icon {
+    background: deepskyblue;
+}
+
+    #Check-list .item-icon img {
+        width: 100px;
+    }
+
+#Check-list .item-text {
+    width: 100%;
+    justify-content: space-between;
+}
+
+#Check-list .textBox {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #2E9DCF;
+}
+
+#Item-list {
+    width: 100%;
+    height: 100%;
+    text-align: justify;
+}
+
+    #Item-list .itme-Check {
+        display: none;
+        height: 100%;
+    }
+
+    #Item-list .attentionBox {
+        width: 80%;
+        margin: 0 auto;
+        background: white;
+        border-radius: 10px;
+        border: 2px solid #C5E2F4;
+        color: #9E9E9F;
+        font-size: 14px;
+        height: 26vh;
+        overflow-y: scroll;
+    }
+
+    #Item-list .attentionBox::-webkit-scrollbar,.resetBox::-webkit-scrollbar{
+        width: 0px;
+    }
+    #Item-list .attentionBox::-webkit-scrollbar-thumb,.resetBox::-webkit-scrollbar-thumb{
+        width: 0px;
+    }
+
+    .resetBox{
+        height: 40vh;
+        overflow-y: scroll;
+    }
+
+#item-EyeCheck-step1 .alert-secondary, #item-ColorCheck-step1 .alert-secondary {
+    max-height: 27vh;
+    margin: 0 auto;
+    line-height: 1.7;
+    overflow-y: scroll;
+    border-bottom: 20px solid #e2e3e5;
+}
+
+    #item-EyeCheck-step1 .alert-secondary ul, #item-ColorCheck-step1 .alert-secondary ul {
+        padding: 0 40px;
+    }
+
+
+
+
+#item-EyeCheck-step2 .screenReset {
+    width: 100px;
+    -webkit-user-select: none; /* for Chrome */
+    user-select: none;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+    #item-EyeCheck-step2 .screenReset:after {
+        content: "";
+        width: 100%;
+        height: 125px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+#item-EyeCheck-step2 .standContainer {
+    position: relative;
+}
+
+    #item-EyeCheck-step2 .standContainer:after {
+        content: "";
+        width: 100%;
+        height: 45%;
+        position: absolute;
+        top: 15%;
+        left: 0;
+    }
+
+#item-EyeCheck-step2 .changeBtn {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.24);
+}
+
+/*#item-EyeCheck-step2 .stand{
+            width:98px;
+            margin: 0 auto;
+            position: relative;
+        }*/
+
+/*#item-EyeCheck-step2 .stand:after {
+            content: "";
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            left: 0;
+            bottom: 2px;
+            border-bottom: 1px dashed;
+        }*/
+
+#item-EyeCheck-step3 h2 {
+    line-height: 1;
+}
+
+.HowToUse {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.HowToUseSlide {
+    position: relative;
+    padding: 10px
+}
+
+    .HowToUseSlide .slide {
+        display: none;
+        width: 240px;
+        height: 170px;
+    }
+
+.nextBtn {
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.HowToUse .selectSlide:after {
+    content: "";
+    position: absolute;
+    padding: 15px;
+    transform: translate(-10px,-8px);
+}
+
+.HowToUseSlide .slide.active {
+    display: inline-block;
+}
+
+.HowToUse .selectSlide {
+    border: 1.5px solid #C8C8C9;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+    .HowToUse .selectSlide.active {
+        background: #C8C8C9;
+    }
+
+.selectSlideBox {
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+    width: 50px;
+    justify-content: space-around;
+}
+
+.checkImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    border-bottom: 1px solid #cbcaca;
+}
+
+#item-EyeCheck-step4 .EyeCheck {
+    display: none;
+}
+
+#item-EyeCheck-step4 .completeBtn {
+    background: #3BB9EA;
+    border-radius: 25px;
+    padding: 10px;
+    color: white;
+    width: 150px;
+    margin: 0 auto;
+}
+
+#item-EyeCheck-step4 .checkImg img {
+    width: 200px;
+}
+
+#item-EyeCheck-step4 .btn-block + .btn-block {
+    margin-top: 1.5rem;
+}
+
+.TurnUp {
+    transform: rotate(0deg);
+}
+
+.TurnDown {
+    transform: rotate(180deg);
+}
+
+.TurnLeft {
+    transform: rotate(270deg);
+}
+
+.TurnRight {
+    transform: rotate(90deg);
+}
+
+.arrowUp {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(0deg);
+}
+
+.arrowDown {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+}
+
+.arrowLeft {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(270deg);
+}
+
+.arrowRight {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+}
+
+
+#item-EyeCheck-step4 .EyeCheck {
+    transition: none;
+}
+
+    #item-EyeCheck-step4 .EyeCheck.activeShow {
+        display: block;
+    }
+
+        #item-EyeCheck-step4 .EyeCheck.activeShow .CheckTest {
+            animation: opacity .3s linear;
+        }
+
+
+
+#item-EyeCheck-step4 .arrowArea {
+    position: relative;
+    height: 40vh;
+}
+
+    #item-EyeCheck-step4 .arrowArea .arrowAreaAlert {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+        #item-EyeCheck-step4 .arrowArea .arrowAreaAlert p {
+            margin: 0;
+            font-weight: bold;
+        }
+
+
+    #item-EyeCheck-step4 .arrowArea .arrow {
+        cursor: pointer;
+        width: 50px;
+        display: inline-block;
+        position: absolute;
+        overflow: visible !important;
+    }
+
+        #item-EyeCheck-step4 .arrowArea .arrow:after {
+            content: "";
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            top: 0;
+            left: 0;
+        }
+
+
+        #item-EyeCheck-step4 .arrowArea .arrow img {
+            width: 100%;
+        }
+
+#item-EyeCheck-step4 .completeTest {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    height: auto;
+    text-align: center;
+    background: #ffffff;
+    box-shadow: 2px 2px 10px 2px rgba(124, 124, 124, 0.18);
+    -moz-box-shadow: 2px 2px 10px 2px rgba(124, 124, 124, 0.18);
+    -webkit-box-shadow: 2px 2px 10px 2px rgba(124, 124, 124, 0.18);
+    z-index: 20;
+}
+
+    #item-EyeCheck-step4 .completeTest p {
+        font-weight: bold;
+        color: #B2B1B1;
+    }
+
+#item-EyeCheck-step4 .completeTestWrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: #24242499;
+}
+
+#item-EyeCheck-step5 {
+    /* background: url('../Images/bgPic01.png') no-repeat 0 0;
+    background-size: contain; */
+    background: #e8f5fb;
+}
+
+    #item-EyeCheck-step5 .AnalysisArea .AnalysisHeader, #item-ColorCheck-step4 .AnalysisArea .AnalysisHeader {
+        padding: 15px;
+        width: 75%;
+        background: white;
+        margin: 0 auto;
+        border-radius: 5px;
+        box-shadow:2px 2px 10px 2px rgb(169 169 169 / 30%);
+        -moz-box-shadow: 2px 2px 10px 2px rgb(169 169 169 / 30%);
+        -webkit-box-shadow: 2px 2px 10px 2px rgb(169 169 169 / 30%);
+        box-sizing: border-box;
+        position: relative;
+        top: 15px;
+    }
+
+    #item-EyeCheck-step5 .AnalysisArea, #item-ColorCheck-step4 .AnalysisArea {
+        height: 165px;
+    }
+
+        #item-EyeCheck-step5 .AnalysisArea .AnalysisHeader h4, #item-ColorCheck-step4 .AnalysisArea .AnalysisHeader h4 {
+            font-weight: bold;
+            font-size:18px;
+        }
+
+    #item-EyeCheck-step5 .eyeDataTitle, #item-ColorCheck-step4 .eyeDataTitle {
+        font-size: 14px;
+    }
+
+    #item-EyeCheck-step5 .eyeDataResult, #item-ColorCheck-step4 .eyeDataResult {
+        font-size: 22px;
+        color: #2AA2DD;
+    }
+
+    #item-EyeCheck-step5 .alert-secondary, #item-ColorCheck-step4 .alert-secondary {
+        border-radius: 5px;
+        margin: 25px auto 0 auto;
+        width: 90%;
+        max-height: 300px;
+        overflow-y: scroll;
+        box-shadow: 2px 2px 10px 2px rgba(124, 124, 124, 0.18);
+        -moz-box-shadow: 2px 2px 10px 2px rgba(124, 124, 124, 0.18);
+        -webkit-box-shadow: 2px 2px 10px 2px rgba(124, 124, 124, 0.18);
+    }
+
+    #item-EyeCheck-step5 .buttonArea, #item-ColorCheck-step4 .buttonArea {
+        width: 75%;
+        margin: 35px auto 0 auto;
+    }
+
+        #item-EyeCheck-step5 .buttonArea .startREYEBtn {
+            display: flex;
+            border: 1px solid #3bb9ea8c;
+            color: #00A2DC;
+            width: 50%;
+            padding: 10px;
+            border-radius: 5px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #item-ColorCheck-step4 .buttonArea .startColorCheckBtn {
+            display: flex;
+            border: 1px solid #00ADB7;
+            color: #00ADB7;
+            width: 50%;
+            padding: 10px;
+            border-radius: 5px;
+            align-items: center;
+            justify-content: center;
+        }
+
+    #item-EyeCheck-step5 .gobacktohome {
+        width: 50%;
+        color: white;
+        background: #3BB9EA;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+    }
+
+#item-ColorCheck-step4 .gobacktohome {
+    width: 50%;
+    color: white;
+    background: #00ADB7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+#item-ColorCheck-step3 {
+    background: white;
+    height: 100vh;
+}
+
+    #item-ColorCheck-step3 .ColorCheckItem img {
+        width: 100%;
+        max-width: 514px;
+        max-height: 385.5px;
+    }
+
+    #item-ColorCheck-step3 .ColorCheckItemAns {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+        #item-ColorCheck-step3 .ColorCheckItemAns .col-6 {
+            padding: 0;
+            border: 2px solid white;
+        }
+
+            #item-ColorCheck-step3 .ColorCheckItemAns .col-6 img {
+                width: 100%;
+            }
+
+    #item-ColorCheck-step3 .ColorCheckAllStyle {
+        display: none;
+        text-align: center;
+    }
+
+    #item-ColorCheck-step3 .ColorCheckItem {
+        max-height: 385.5px;
+        overflow: hidden;
+    }
+
+    #item-ColorCheck-step3 .ColorCheckAllStyle.activeShow {
+        display: block;
+    }
+
+    #item-ColorCheck-step3 .ColorCheckItem {
+        display: none;
+    }
+
+#item-ColorCheck-step4 .colorCheckResult {
+    width: 75%;
+    padding-top: 30px;
+}
+
+
+.showVision {
+    position: absolute;
+    display: none;
+}
+
+#item-ColorCheck-step4 {
+    background: url('../Images/bgPic02.png') no-repeat 0 0;
+    background-size: contain;
+}
+
+    #item-ColorCheck-step4 .eyeColorTitle {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+span.eyeColorResult {
+    font-size: 15px;
+}
+
+.LinktoLine {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 155px;
+    top: 17%;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    overflow: hidden; /* 限定範圍 */
+    width: 200px;
+    height: 20px;
+    outline: none; /* 避免點選會有藍線或虛線 */
+    background: none;
+    position: relative;
+}
+
+input#formControlRange:before {
+    position: absolute;
+    width: 200px;
+    height: 5px;
+    background: #C5E2F4;
+    content: "";
+    top: 8px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    position: relative; /* 設為相對位置，為了前後區塊的絕對位置而設定 */
+    width: 18px;
+    height: 18px;
+    background: #00A9E7;
+    border-radius: 50%;
+    border: 0px;
+}
+
+    input[type="range"]::-webkit-slider-thumb:before {
+        left: -1997px;
+        background: #00A9E7;
+    }
+
+.relative {
+    position: relative;
+}
+
+#top {
+    position: fixed;
+    bottom: 90px;
+    right: 15px;
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+}
+
+
+@keyframes opacity {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes changeBG {
+    0% {
+        background: url('../Images/howToUse1.png') 50% no-repeat;
+        background-size: contain;
+    }
+
+    50% {
+        background: url('../Images/howToUse1.png') 50% no-repeat;
+        background-size: contain;
+    }
+
+    75% {
+        background: url('../Images/howToUse2.png') 50% no-repeat;
+        background-size: contain;
+    }
+
+    100% {
+        background: url('../Images/howToUse2.png') 50% no-repeat;
+        background-size: contain;
+    }
+}
+
+
+
+
+@media (max-width:360px) {
+    #item-EyeCheck-step5 .alert-secondary {
+        max-height: 150px;
+    }
+
+    #item-EyeCheck-step4 .checkImg {
+        height: 55vh
+    }
+
+    #item-ColorCheck-step4 .h4, h4 {
+        font-size: 1.2rem;
+    }
+
+    #item-EyeCheck-step1 .alert-secondary, #item-ColorCheck-step1 .alert-secondary {
+        max-height: 27vh;
+    }
+
+    #item-ColorCheck-step2 .h2, h2 {
+        font-size: 1.5rem;
+    }
+
+    #item-EyeCheck-step2 .p-4 {
+        padding-bottom: 0 !important;
+    }
+
+    #item-ColorCheck-step4 .eyeColorTitle {
+        font-size: 18px;
+    }
+
+    #item-ColorCheck-step4 span.eyeColorResult {
+        font-size: 15px;
+    }
+
+    #item-ColorCheck-step4 .colorCheckResult {
+        width: 60%;
+    }
+
+    #item-ColorCheck-step4 p {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    #item-EyeCheck-step5 .alert-secondary, #item-ColorCheck-step4 .alert-secondary {
+        max-height: 180px;
+    }
+
+   
+}
+
+@media (max-width:415px) {
+    .BNPic {
+        width: 100%;
+    }
+}
+
+@media (max-width:500px) {
+    main {
+        height: 100vh;
+    }
+
+    #item-EyeCheck-step3 .HowToUseSlide .slide {
+        width: 250px;
+        height: 225px;
+    }
+
+    #item-ColorCheck-step2 .HowToUseSlide .slide {
+        width: 240px;
+        height: 200px;
+    }
+
+    #item-EyeCheck-step5 .AnalysisArea {
+        height: 300px;
+    }
+
+    #item-ColorCheck-step4 .AnalysisArea {
+        height: 300px;
+    }
+
+    #item-ColorCheck-step4 .colorCheckResult {
+        width: 80%;
+        height: auto;
+    }
+}
+
