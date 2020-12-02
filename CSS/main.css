@@ -1,9 +1,9 @@
 ﻿* {
     transition: .3s;
 }
-.container{
-    width: 100vw;
-    height: 100vh;
+#container{
+    width: 100%;
+    min-height: -webkit-fill-available;
     overflow: hidden;
 }
 
