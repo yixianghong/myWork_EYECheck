@@ -3,7 +3,7 @@
 }
 #container{
     width: 100%;
-    min-height: -webkit-fill-available;
+    height: fill-available;
     overflow: hidden;
 }
 
